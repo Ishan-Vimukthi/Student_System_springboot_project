@@ -1,4 +1,15 @@
 package com.testproject.studentsystem.service;
 
-public class StudentServiceImpl {
+import com.testproject.studentsystem.model.Student;
+import com.testproject.studentsystem.repository.StudentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class StudentServiceImpl implements StudentService{
+
+    @Autowired
+    private StudentRepository studentRepository;
+    @Override
+    public Student saveStudent(Student student) {
+        return studentRepository.save(student);
+    }
 }
