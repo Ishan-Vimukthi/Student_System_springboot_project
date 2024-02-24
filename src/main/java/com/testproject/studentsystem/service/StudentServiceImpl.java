@@ -3,7 +3,9 @@ package com.testproject.studentsystem.service;
 import com.testproject.studentsystem.model.Student;
 import com.testproject.studentsystem.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class StudentServiceImpl implements StudentService{
 
     @Autowired
